@@ -1,0 +1,198 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Borrowed Time | Teen Sleep Deprivation</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <h2>Borrowed<span>Time</span></h2>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#claims">Claims</a>
+      <a href="#data">Data</a>
+      <a href="#paper">Paper</a>
+      <a href="#survey">Survey</a>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div>
+      <p class="tag">Teen Sleep Deprivation Research Project</p>
+      <h1>Borrowed <span>Time</span></h1>
+      <h3>How teenagers repay academic pressure with sleep debt.</h3>
+      <p>
+        This website explains how sleep deprivation affects teenagers cognitively,
+        emotionally, physically, physiologically, and academically.
+      </p>
+      <a href="#data" class="btn">Explore the Data</a>
+    </div>
+
+    <div class="video-box">
+      <h2>Intro Video</h2>
+      <p>Upload your video to GitHub and name it <b>intro-video.mp4</b>.</p>
+      <video controls>
+        <source src="intro-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Thesis Statement</h2>
+    <p>
+      Teen sleep deprivation is a widespread public health issue that negatively
+      affects cognitive performance, mental well-being, physical health,
+      physiological development, and long-term academic success.
+    </p>
+  </section>
+
+  <section id="claims" class="section dark">
+    <h2>Research Claims</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Cognitive/Academic Damage</h3>
+        <p>Sleep deprivation weakens memory, focus, decision-making, reaction time, and academic performance.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Mental/Emotional Damage</h3>
+        <p>Sleep deprivation contributes to anxiety, depression, burnout, irritability, and emotional instability.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Physical Health Damage</h3>
+        <p>Sleep loss harms immune function, cardiovascular health, metabolism, energy, and overall physical health.</p>
+      </div>
+
+      <div class="card">
+        <h3>4. Physiological Damage</h3>
+        <p>Sleep deprivation disrupts hormones, cortisol, insulin sensitivity, inflammation, glucose regulation, and circadian rhythms.</p>
+      </div>
+
+      <div class="card">
+        <h3>5. Structural Causes</h3>
+        <p>Early school start times, homework, academic pressure, social media, extracurriculars, and long commutes reduce teen sleep.</p>
+      </div>
+
+      <div class="card">
+        <h3>6. Long-Term Consequences</h3>
+        <p>Chronic sleep deprivation increases long-term health risks, burnout, academic decline, and developmental issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="data" class="section">
+    <h2>Survey Data From My Research</h2>
+
+    <div class="chart-grid">
+      <div class="card">
+        <h3>Hours of Sleep on School Nights</h3>
+        <canvas id="sleepHoursChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Health Impact of Sleep Loss</h3>
+        <canvas id="healthImpactChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Illness Frequency During School Year</h3>
+        <canvas id="illnessChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Overall Impact Map</h3>
+        <canvas id="impactRadar"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section id="paper" class="section dark">
+    <h2>Research Paper Summary</h2>
+
+    <div class="paper">
+      <h3>Introduction</h3>
+      <p>
+        For many teenagers, academic success comes at a price, and that price is
+        often paid in sleep. Late nights filled with assignments, studying,
+        deadlines, and pressure become a routine where rest feels optional rather
+        than necessary.
+      </p>
+
+      <h3>Cognitive Effects</h3>
+      <p>
+        Sleep deprivation weakens attention, memory consolidation, decision-making,
+        and reaction time. This makes it harder for students to focus, retain
+        information, and perform well academically.
+      </p>
+
+      <h3>Mental and Emotional Effects</h3>
+      <p>
+        Lack of sleep increases stress, anxiety, irritability, emotional instability,
+        and burnout. Sleep acts like a reset button for mood, and without it,
+        students become more vulnerable to emotional overload.
+      </p>
+
+      <h3>Physical and Physiological Effects</h3>
+      <p>
+        Sleep deprivation affects immune function, metabolism, hormones, cortisol,
+        inflammation, glucose regulation, and physical recovery. These effects show
+        that sleep loss is not just tiredness. It is biological stress.
+      </p>
+
+      <h3>Conclusion</h3>
+      <p>
+        Sleep is not extra. It is necessary for learning, health, and development.
+        The belief that students must choose between sleep and success is wrong
+        because sleep deprivation actually makes success harder to achieve.
+      </p>
+    </div>
+  </section>
+
+  <section id="survey" class="section">
+    <h2>Mini Sleep Survey</h2>
+
+    <div class="card">
+      <label>How many hours do you sleep on school nights?</label>
+      <select id="q1">
+        <option>5 hours or less</option>
+        <option>6 hours</option>
+        <option>7 hours</option>
+        <option>8 hours or more</option>
+      </select>
+
+      <label>How much does lack of sleep affect your health?</label>
+      <select id="q2">
+        <option>Not at all</option>
+        <option>Slightly</option>
+        <option>Moderately</option>
+        <option>A lot</option>
+      </select>
+
+      <label>What keeps you up the most?</label>
+      <input id="q3" placeholder="Homework, social media, stress, gaming..." />
+
+      <button onclick="showSurveyResult()">Submit</button>
+      <p id="surveyResult"></p>
+    </div>
+
+    <div class="motivation">
+      <h2>Need Motivation?</h2>
+      <p id="motivationText">You are not lazy. You might just be exhausted.</p>
+      <button onclick="newMotivation()">Cheer Me Up</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created by Shamor Johnson | Teen Sleep Deprivation Research Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
